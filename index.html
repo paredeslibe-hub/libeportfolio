@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffedd8" />
+  <title>Portfolio de Product Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">Portfolio.</a>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="#work">Proyectos</a>
+        <a href="#consulting">Consultoría</a>
+        <a href="#process">Proceso</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-btn" type="button">ES</button>
+        <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero-section">
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <span class="hero-pretitle">Hola, soy Libe Paredes</span>
+          <h1>Product Designer</h1>
+          <p class="hero-highlight">UX UI</p>
+          <p class="hero-description">Diseño productos digitales con foco en experiencia de usuario, IA aplicada y resultados de negocio.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#work">Ver proyectos</a>
+            <a class="button outline" href="#contact">Contactarme</a>
+          </div>
+        </div>
+        <img src="assets/me-photo.png" alt="Libe Paredes" class="hero-image" aria-hidden="true" />
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="container about-grid">
+        <div class="about-card">
+          <div class="about-badges">
+            <span class="badge">Product Designer</span>
+            <span class="badge">Consultora UX</span>
+          </div>
+          <img src="assets/libe-perfil.png" alt="Libe Paredes" class="about-photo" />
+          <div class="about-footer">
+            <span class="status available">Disponible</span>
+            <span>+6 años de experiencia en Producto</span>
+          </div>
+        </div>
+        <div class="about-copy">
+          <p class="section-label">Sobre mí</p>
+          <h2>Product Designer y Consultora UX con más de 6 años de experiencia.</h2>
+          <p>Me especializo en inteligencia artificial aplicada al product design, integrando herramientas y flujos de trabajo basados en IA para optimizar research, ideación, prototipado y validación.</p>
+          <p>Trabajo con startups y empresas como consultora UX y freelance, ayudando a definir problemas reales, tomar mejores decisiones de producto y diseñar experiencias accesibles, intuitivas y alineadas con objetivos de negocio.</p>
+          <ul class="about-list">
+            <li>Latam, remoto</li>
+            <li>+6 años en diseño de producto</li>
+          </ul>
+          <a class="button primary" href="#work">Ver proyectos</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section projects-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Proyectos destacados</p>
+          <h2>Mis trabajos más recientes con enfoque en Fintech e Inteligencia Artificial para los principales mercados de América: Brasil, Estados Unidos, México y Chile.</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <img src="assets/project-1.png" alt="Neobank App" class="project-image" />
+            <span class="project-tag">Fintech</span>
+            <h3>Neobank App</h3>
+            <p>Diseño de App para neobank en Brasil. Límites de crédito innovador.</p>
+            <div class="project-meta">
+              <span>Research</span>
+              <span>UX/UI</span>
+              <span>Strategy</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="assets/project-2.png" alt="App con Inteligencia Artificial" class="project-image" />
+            <span class="project-tag">Fintech</span>
+            <h3>App con Inteligencia Artificial</h3>
+            <p>App lanzada en USA que analiza los datos de los usuarios y responde con inteligencia artificial, ayudándolos a conseguir productos financieros.</p>
+            <div class="project-meta">
+              <span>AI</span>
+              <span>UX/UI</span>
+              <span>Research</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="assets/project-3.png" alt="Portal de Créditos" class="project-image" />
+            <span class="project-tag">Fintech</span>
+            <h3>Portal de Créditos</h3>
+            <p>Plataforma de análisis de datos de trabajadores que ofrece productos financieros personalizados.</p>
+            <div class="project-meta">
+              <span>UX/UI</span>
+              <span>Research</span>
+              <span>Análisis de datos</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="assets/project-4-fintech-apps-pets.png" alt="Wallet Pets App" class="project-image" />
+            <span class="project-tag">Fintech</span>
+            <h3>Wallet Pets App</h3>
+            <p>Aplicación para pedir comida de mascotas, ganar puntos y tener una billetera virtual para tu mascota.</p>
+            <div class="project-meta">
+              <span>UX/UI</span>
+              <span>E-commerce</span>
+              <span>Wallet</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="consulting" class="section consulting-section">
+      <div class="container consulting-grid">
+        <div class="consulting-copy">
+          <p class="section-label">Consultoría UX</p>
+          <h2>Para Startups y Equipos de Producto</h2>
+          <p>Ayudo a equipos digitales a tomar mejores decisiones de producto mediante estrategia UX, research enfocado y recomendaciones accionables.</p>
+          <ul class="consulting-list">
+            <li>Análisis de experiencia de usuario</li>
+            <li>Identificación de fricciones y oportunidades</li>
+            <li>Recomendaciones estratégicas priorizadas</li>
+            <li>Research enfocado en problemas reales</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="button primary" href="#contact">Agendar reunión</a>
+            <a class="button outline" href="#contact">Ver más información</a>
+          </div>
+        </div>
+        <div class="consulting-card">
+          <img src="assets/connect.png" alt="Consultoría UX" class="consulting-image" />
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section process-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Mi proceso de diseño</p>
+          <h2>Mi enfoque centrado en el usuario combina estrategia y negocio.</h2>
+          <p class="process-description">Integro metodologías según cada proyecto para diseñar soluciones pensadas en el impacto real.</p>
+        </div>
+        <div class="process-grid">
+          <article class="process-card">
+            <span class="process-index">01</span>
+            <h3>Research</h3>
+            <p>Investigación cualitativa y cuantitativa para entender el problema.</p>
+          </article>
+          <article class="process-card">
+            <span class="process-index">02</span>
+            <h3>Ideación</h3>
+            <p>Generación de conceptos y priorización basada en insights.</p>
+          </article>
+          <article class="process-card">
+            <span class="process-index">03</span>
+            <h3>Diseño</h3>
+            <p>Wireframes, prototipos y visuales con foco en usabilidad.</p>
+          </article>
+          <article class="process-card">
+            <span class="process-index">04</span>
+            <h3>Testing</h3>
+            <p>Validación con usuarios y ajustes basados en feedback.</p>
+          </article>
+          <article class="process-card">
+            <span class="process-index">05</span>
+            <h3>Entrega</h3>
+            <p>Hand-off directo con desarrollo y seguimiento del producto.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Habilidades & Herramientas</p>
+          <h2>Experiencia integral en todo el ciclo de diseño de producto.</h2>
+        </div>
+        <div class="skills-grid">
+          <article class="skills-card">
+            <h3>Visual Design</h3>
+            <ul>
+              <li>UI Design</li>
+              <li>Design Systems</li>
+              <li>Tipografía</li>
+            </ul>
+          </article>
+          <article class="skills-card">
+            <h3>UX Research</h3>
+            <ul>
+              <li>User Testing</li>
+              <li>Personas</li>
+              <li>Journey Maps</li>
+            </ul>
+          </article>
+          <article class="skills-card">
+            <h3>Herramientas</h3>
+            <ul>
+              <li>Figma</li>
+              <li>Adobe XD</li>
+              <li>AI Tools</li>
+            </ul>
+          </article>
+          <article class="skills-card">
+            <h3>Metodologías</h3>
+            <ul>
+              <li>Design Thinking</li>
+              <li>Lean UX</li>
+              <li>A/B Testing</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="references" class="section references-section">
+      <div class="container references-card">
+        <p class="section-label">Referencias</p>
+        <h2>Lo que dicen quienes han trabajado conmigo</h2>
+        <div class="reference-item">
+          <p>Tuve el placer de trabajar con Libe durante casi dos años desde mi rol como Product Manager en equipos de diseño. Durante ese tiempo se desempeñó como UX/UI Designer con una mirada integral, sólida criterio de diseño y un fuerte enfoque tanto en el usuario como en los objetivos del negocio.</p>
+          <div class="reference-meta">
+            <span>Diego Hernando</span>
+            <span>Product Manager / Agile Consultant</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-label">¿Trabajamos juntos?</p>
+          <h2>Estoy disponible para proyectos freelance y colaboraciones.</h2>
+          <p class="contact-copy">Contáctame</p>
+          <a class="contact-link" href="mailto:paredeslibe@gmail.com">paredeslibe@gmail.com</a>
+          <a class="contact-link" href="https://wa.me/541132914989" target="_blank">Whatsapp +54 1132914989</a>
+        </div>
+        <a class="button primary" href="https://wa.me/541132914989" target="_blank">Enviar mensaje</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Libe Paredes</p>
+      <a class="social-link" href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
