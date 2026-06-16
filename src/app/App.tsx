@@ -2,6 +2,7 @@ import { useEffect, Component, ReactNode } from 'react';
 import { RouterProvider } from 'react-router';
 import { router } from './routes';
 import { initGA } from './utils/analytics';
+import { LanguageProvider } from './context/LanguageContext';
 
 class ErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean }> {
   constructor(props: { children: ReactNode }) {
@@ -43,7 +44,9 @@ export default function App() {
 
   return (
     <ErrorBoundary>
-      <RouterProvider router={router} />
+      <LanguageProvider>
+        <RouterProvider router={router} />
+      </LanguageProvider>
     </ErrorBoundary>
   );
 }

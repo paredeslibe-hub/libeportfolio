@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router';
 import { Menu, X, Globe, Calendar, Info, MessageCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import { trackWhatsAppClick } from '../utils/analytics';
+import { useLanguage } from '../context/LanguageContext';
 import { NewHero } from './NewHero';
 import { AboutMe } from './AboutMe';
 import { ProjectCard } from './ProjectCard';
@@ -345,14 +346,14 @@ function TestimonialsCarousel({ items }: { items: TestimonialItem[] }) {
 export function Portfolio() {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [language, setLanguage] = useState<'es' | 'en' | 'pt'>('es');
+  const { language, setLanguage } = useLanguage();
 
   const t = translations[language];
 
   return (
     <div className="min-h-screen bg-white relative">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-white/50 backdrop-blur-md border-b border-gray-200/50 z-50 relative">
+      <nav className="fixed top-0 left-0 right-0 bg-white/50 backdrop-blur-md border-b border-gray-200/50 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between relative">
           <div className="text-xl text-gray-900">
             Portfolio<span className="text-orange-500">.</span>
@@ -380,7 +381,7 @@ export function Portfolio() {
               className="flex items-center gap-2 px-4 py-2 bg-orange-100 text-orange-700 rounded-lg hover:bg-orange-200 transition-colors"
             >
               <Globe size={18} />
-              <span className="font-medium">{language === 'es' ? 'EN' : language === 'en' ? 'PT' : 'ES'}</span>
+              <span className="font-medium">{language.toUpperCase()}</span>
             </button>
           </div>
 
