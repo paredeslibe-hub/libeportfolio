@@ -47,7 +47,7 @@ export function NewHero({ language = 'es' }: NewHeroProps) {
             {t.greeting}
           </motion.p>
 
-          <div className="font-['Consolas',monospace] text-gray-900 leading-tight text-5xl md:text-6xl lg:text-7xl xl:text-9xl">
+          <div className="font-['Consolas',monospace] text-gray-900 leading-tight text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
             <motion.span
               className="block"
               initial={{ opacity: 0, x: -40 }}
