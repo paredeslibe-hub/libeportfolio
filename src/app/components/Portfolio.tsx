@@ -497,6 +497,7 @@ export function Portfolio() {
 
           <div className="relative">
             <Slider
+              key={language}
               dots={true}
               infinite={true}
               speed={500}
@@ -505,7 +506,6 @@ export function Portfolio() {
               autoplay={true}
               autoplaySpeed={5000}
               arrows={false}
-              adaptiveHeight={true}
             >
               {t.testimonials.items.map((testimonial, index) => (
                 <div key={index} className="px-2">
