@@ -1,10 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router';
-import { Menu, X, Globe, Calendar, Info, MessageCircle } from 'lucide-react';
+import { Menu, X, Globe, Calendar, Info, MessageCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import { trackWhatsAppClick } from '../utils/analytics';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import { NewHero } from './NewHero';
 import { AboutMe } from './AboutMe';
 import { ProjectCard } from './ProjectCard';
@@ -260,6 +257,91 @@ const translations = {
   }
 };
 
+interface TestimonialItem {
+  quote: string;
+  author: string;
+  role: string;
+  initials: string;
+}
+
+function TestimonialsCarousel({ items }: { items: TestimonialItem[] }) {
+  const [current, setCurrent] = useState(0);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const stopTimer = () => {
+    if (timerRef.current) clearInterval(timerRef.current);
+  };
+
+  const startTimer = () => {
+    stopTimer();
+    timerRef.current = setInterval(() => {
+      setCurrent(prev => (prev + 1) % items.length);
+    }, 5000);
+  };
+
+  useEffect(() => {
+    startTimer();
+    return stopTimer;
+  }, [items.length]);
+
+  const goTo = (index: number) => {
+    setCurrent(index);
+    startTimer();
+  };
+
+  const prev = () => goTo((current - 1 + items.length) % items.length);
+  const next = () => goTo((current + 1) % items.length);
+
+  const item = items[current];
+
+  return (
+    <div className="relative">
+      <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg border border-white/50 min-h-[320px] flex flex-col justify-between">
+        <div>
+          <svg className="mb-4 text-orange-400" width="36" height="36" viewBox="0 0 24 24" fill="none">
+            <path d="M10 9V5L6 9H10ZM18 9V5L14 9H18Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"/>
+          </svg>
+          <blockquote className="text-base md:text-lg mb-6 leading-relaxed text-gray-700 whitespace-pre-line">
+            {item.quote}
+          </blockquote>
+        </div>
+
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-rose-400 rounded-full flex items-center justify-center text-white text-base flex-shrink-0">
+              {item.initials}
+            </div>
+            <div>
+              <p className="font-semibold text-gray-900 text-base">{item.author}</p>
+              <p className="text-sm text-gray-600">{item.role}</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <button onClick={prev} className="w-8 h-8 rounded-full bg-orange-100 hover:bg-orange-200 flex items-center justify-center transition-colors" aria-label="Anterior">
+              <ChevronLeft size={16} className="text-orange-600" />
+            </button>
+            <button onClick={next} className="w-8 h-8 rounded-full bg-orange-100 hover:bg-orange-200 flex items-center justify-center transition-colors" aria-label="Siguiente">
+              <ChevronRight size={16} className="text-orange-600" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-center gap-2 mt-4">
+        {items.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => goTo(i)}
+            className={`w-2 h-2 rounded-full transition-all ${i === current ? 'bg-orange-500 w-6' : 'bg-orange-200'}`}
+            aria-label={`Ir al testimonio ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function Portfolio() {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -495,45 +577,7 @@ export function Portfolio() {
             </p>
           </div>
 
-          <div className="relative">
-            <Slider
-              key={language}
-              dots={true}
-              infinite={true}
-              speed={500}
-              slidesToShow={1}
-              slidesToScroll={1}
-              autoplay={true}
-              autoplaySpeed={5000}
-              arrows={false}
-            >
-              {t.testimonials.items.map((testimonial, index) => (
-                <div key={index} className="px-2">
-                  <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg border border-white/50">
-                    <div className="mb-4">
-                      <svg className="mb-4 text-orange-400" width="36" height="36" viewBox="0 0 24 24" fill="none">
-                        <path d="M10 9V5L6 9H10ZM18 9V5L14 9H18Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"/>
-                      </svg>
-                    </div>
-
-                    <blockquote className="text-base md:text-lg mb-6 leading-relaxed text-gray-700 whitespace-pre-line">
-                      {testimonial.quote}
-                    </blockquote>
-
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-rose-400 rounded-full flex items-center justify-center text-white text-base">
-                        {testimonial.initials}
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-900 text-base">{testimonial.author}</p>
-                        <p className="text-sm text-gray-600">{testimonial.role}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </Slider>
-          </div>
+          <TestimonialsCarousel items={t.testimonials.items} />
         </div>
       </section>
 

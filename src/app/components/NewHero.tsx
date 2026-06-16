@@ -33,25 +33,24 @@ function TypingText({ text, delay = 0 }: { text: string; delay?: number }) {
     setDisplayed('');
     setDone(false);
 
+    let interval: ReturnType<typeof setInterval> | null = null;
+
     const startTimer = setTimeout(() => {
       let index = 0;
-      const type = () => {
+      interval = setInterval(() => {
         index += 1;
         setDisplayed(text.slice(0, index));
         if (index >= text.length) {
           setDone(true);
+          if (interval) clearInterval(interval);
         }
-      };
-
-      const interval = setInterval(() => {
-        type();
-        if (index >= text.length) clearInterval(interval);
       }, 100);
-
-      return () => clearInterval(interval);
     }, delay);
 
-    return () => clearTimeout(startTimer);
+    return () => {
+      clearTimeout(startTimer);
+      if (interval) clearInterval(interval);
+    };
   }, [text, delay]);
 
   return (
