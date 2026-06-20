@@ -1,5 +1,5 @@
 import svgPaths from '@/imports/Hero4/svg-qs20gkemae';
-import imgHero4 from '@/imports/Hero4/8601e7a0b876b42a34fb6cb86fc5483d5b6f5ce1.png';
+import imgHero4 from '@/assets/shared/footer-background.png';
 
 const translations = {
   es: {
