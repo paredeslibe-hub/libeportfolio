@@ -170,7 +170,7 @@ export function LlmContent() {
           <dl>
             <dt>Role</dt><dd>UX/UI Designer</dd>
             <dt>Industry</dt><dd>B2B Fintech / HR Tech / Lending</dd>
-            <dt>Timeline</dt><dd>3 months</dd>
+            <dt>Timeline</dt><dd>18 months</dd>
             <dt>Market</dt><dd>Mexico and Chile</dd>
           </dl>
 
@@ -203,7 +203,7 @@ export function LlmContent() {
             <li>Form completion rate increased from 35% to 71% — plus 103% improvement</li>
             <li>Support tickets related to UX confusion decreased by 45%</li>
             <li>Average application time reduced from 18 minutes to 6 minutes</li>
-            <li>Full delivery and dev handoff within 3-month timeline</li>
+            <li>Full delivery and dev handoff within 18-month timeline</li>
           </ul>
         </article>
       </section>
