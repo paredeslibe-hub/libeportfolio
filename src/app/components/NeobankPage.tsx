@@ -7,6 +7,8 @@ import imgOnboarding11 from "figma:asset/29fe268c0f9d7ca5eff7ea7cc8dd07d1d2ea62a
 import imgRoadmap from "figma:asset/ab95d16e568df4c66c58956a7bca40e820060e8c.png";
 import imgIPhone16Pro from "figma:asset/d54be5559cc7e1deac438ee76344e08f3a160639.png";
 import imgAnalisisDatos from "figma:asset/a1c2c96fdcd93de9ef55f3e8a4cc796a3453c3c4.png";
+import imgResearchSurvey from "../../../assets/project-1/research-project-1.png";
+import imgOnboardingFlow from "../../../assets/project-1/onboarding-flow-1.png";
 
 interface NeobankPageProps {
   language?: 'es' | 'en' | 'pt';
@@ -35,6 +37,8 @@ const translations = {
       title: 'Metodología',
       step1Title: 'Validación de Hipótesis',
       step1Desc: 'En la primera etapa del cambio, se trabajó bajo la metodología de validar hipótesis directo con los usuarios. Trabajando con ellos desde el primer momento.',
+      step1Research: 'Como parte del research, validamos con nuestros usuarios a través de encuestas: enviamos un cuestionario para validar el interés en el producto. De 359 respuestas, el 82,7% mostró mucho interés en acceder a créditos con mayor facilidad.',
+      step1ResearchAlt: 'Resultados del cuestionario de validación enviado a usuarios',
       step2Title: 'Análisis de Métricas',
       step2Desc1: 'A través de las métricas del antiguo portal de la aplicación, identificamos que los usuarios estaban únicamente interesados en productos financieros que le ofrezcan límites de crédito personales, de forma rápida.',
       step2Desc2: 'Hicimos una primera validación de hipótesis enviando mensajes de WhatsApp a nuestros usuarios con mejor reputación con la idea de validar el interés por un límite de crédito.',
@@ -117,6 +121,8 @@ const translations = {
       title: 'Methodology',
       step1Title: 'Hypothesis Validation',
       step1Desc: 'In the first stage of the change, we worked under the methodology of validating hypotheses directly with users. Working with them from the very beginning.',
+      step1Research: 'As part of the research, we validated with our users through surveys: we sent a questionnaire to validate interest in the product. Out of 359 responses, 82.7% showed strong interest in accessing credit more easily.',
+      step1ResearchAlt: 'Results of the validation questionnaire sent to users',
       step2Title: 'Metrics Analysis',
       step2Desc1: 'Through the metrics of the old application portal, we identified that users were solely interested in financial products that offered personal credit limits quickly.',
       step2Desc2: 'We conducted a first hypothesis validation by sending WhatsApp messages to our users with the best reputation to validate interest in a credit limit.',
@@ -199,6 +205,8 @@ const translations = {
       title: 'Metodologia',
       step1Title: 'Validação de Hipóteses',
       step1Desc: 'Na primeira etapa da mudança, trabalhamos sob a metodologia de validar hipóteses direto com os usuários. Trabalhando com eles desde o primeiro momento.',
+      step1Research: 'Como parte do research, validamos com nossos usuários através de pesquisas: enviamos um questionário para validar o interesse no produto. De 359 respostas, 82,7% mostraram muito interesse em acessar créditos com mais facilidade.',
+      step1ResearchAlt: 'Resultados do questionário de validação enviado aos usuários',
       step2Title: 'Análise de Métricas',
       step2Desc1: 'Através das métricas do antigo portal do aplicativo, identificamos que os usuários estavam unicamente interessados em produtos financeiros que lhes oferecessem limites de crédito pessoais, de forma rápida.',
       step2Desc2: 'Fizemos uma primeira validação de hipóteses enviando mensagens de WhatsApp para nossos usuários com melhor reputação com a ideia de validar o interesse por um limite de crédito.',
@@ -364,9 +372,17 @@ export function NeobankPage({ language = 'es' }: NeobankPageProps) {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.methodology.step1Title}</h3>
-                    <p className="text-gray-700">
+                    <p className="text-gray-700 mb-4">
                       {t.methodology.step1Desc}
                     </p>
+                    <p className="text-gray-700 mb-6">
+                      {t.methodology.step1Research}
+                    </p>
+                    <img
+                      src={imgResearchSurvey}
+                      alt={t.methodology.step1ResearchAlt}
+                      className="w-full bg-white rounded-xl shadow-lg p-4"
+                    />
                   </div>
                 </div>
               </div>
@@ -446,18 +462,25 @@ export function NeobankPage({ language = 'es' }: NeobankPageProps) {
             </div>
 
             {/* Step 4 */}
-            <div className="max-w-3xl mx-auto">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center text-xl font-bold">
-                  4
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.methodology.step4Title}</h3>
-                  <p className="text-gray-700">
-                    {t.methodology.step4Desc}
-                  </p>
+            <div>
+              <div className="max-w-3xl mx-auto">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center text-xl font-bold">
+                    4
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.methodology.step4Title}</h3>
+                    <p className="text-gray-700">
+                      {t.methodology.step4Desc}
+                    </p>
+                  </div>
                 </div>
               </div>
+              <img
+                src={imgOnboardingFlow}
+                alt={t.methodology.step4Title}
+                className="w-full rounded-xl shadow-lg mt-8"
+              />
             </div>
           </div>
         </div>

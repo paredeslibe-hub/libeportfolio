@@ -24,8 +24,8 @@ export function LlmContent() {
           professional experience designing digital products for fintech startups and technology
           companies in Brazil, the United States, Mexico, and Chile. She specializes in
           AI-powered product design, mobile app UX, design systems, and user research for
-          financial services. She is available immediately for remote full-time or freelance
-          opportunities in product design, UX strategy, and fintech.
+          financial services. She is available immediately for remote full-time roles and consulting
+          engagements in product design, UX strategy, and fintech.
         </p>
         <p>
           Contact: paredeslibe@gmail.com |
@@ -98,6 +98,7 @@ export function LlmContent() {
           <h4>Action</h4>
           <ul>
             <li>Analyzed 2,000+ legacy user sessions to map abandonment patterns and redesign scope</li>
+            <li>Ran a research survey (questionnaire) with users to validate hypotheses — 359 responses, 82.7% showed strong interest in easier access to credit</li>
             <li>Led WhatsApp-based hypothesis validation with top-reputation users to pre-validate credit product demand</li>
             <li>Designed and tested 3 onboarding variants via guerrilla testing with 15 real participants</li>
             <li>Built a Figma design system with 80+ components enabling engineering to implement at double the previous velocity</li>
