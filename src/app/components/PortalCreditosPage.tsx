@@ -508,7 +508,7 @@ export function PortalCreditosPage({ language = 'es' }: PortalCreditosPageProps)
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
-              <div className="text-5xl font-bold text-orange-500 mb-2">6</div>
+              <div className="text-5xl font-bold text-orange-500 mb-2">18</div>
               <p className="text-gray-600">{t.results.months}</p>
             </div>
             
