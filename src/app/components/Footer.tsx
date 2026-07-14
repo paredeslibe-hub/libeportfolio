@@ -4,21 +4,21 @@ import imgHero4 from '@/assets/shared/footer-background.png';
 const translations = {
   es: {
     title: '¿Trabajamos juntos?',
-    subtitle: 'Estoy disponible para proyectos freelance y colaboraciones',
+    subtitle: 'Estoy disponible para trabajo full-time y consultoría',
     contact: 'Contáctame',
     whatsapp: 'Whatsapp',
     copyright: '2026 Portfolio de Product Design. Diseñado con pasión.'
   },
   en: {
     title: 'Let\'s work together?',
-    subtitle: 'I\'m available for freelance projects and collaborations',
+    subtitle: 'I\'m available for full-time roles and consulting',
     contact: 'Contact me',
     whatsapp: 'Whatsapp',
     copyright: '2026 Product Design Portfolio. Designed with passion.'
   },
   pt: {
     title: 'Vamos trabalhar juntos?',
-    subtitle: 'Estou disponível para projetos freelance e colaborações',
+    subtitle: 'Estou disponível para trabalho full-time e consultoria',
     contact: 'Contate-me',
     whatsapp: 'Whatsapp',
     copyright: '2026 Portfólio de Product Design. Projetado com paixão.'

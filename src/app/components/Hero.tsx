@@ -5,7 +5,7 @@ const translations = {
   es: {
     badges: ['Product Designer', 'Consultora UX'],
     greeting: 'Hola, soy',
-    description: 'Product Designer y Consultora UX con más de 6 años de experiencia en diseño de productos digitales, UX/UI y estrategia de producto.\n\nMe especializo en Inteligencia Artificial aplicada al Product Design, integrando herramientas y flujos de trabajo basados en IA para optimizar procesos de research, ideación, prototipado y validación.\n\nTrabajo con startups y empresas como consultora UX y freelance, ayudando a definir problemas reales, tomar mejores decisiones de producto y diseñar experiencias digitales accesibles, intuitivas y alineadas con objetivos de negocio.',
+    description: 'Product Designer y Consultora UX con más de 6 años de experiencia en diseño de productos digitales, UX/UI y estrategia de producto.\n\nMe especializo en Inteligencia Artificial aplicada al Product Design, integrando herramientas y flujos de trabajo basados en IA para optimizar procesos de research, ideación, prototipado y validación.\n\nTrabajo con startups y empresas ayudando a definir problemas reales, tomar mejores decisiones de producto y diseñar experiencias digitales accesibles, intuitivas y alineadas con objetivos de negocio.\n\nEstoy disponible para trabajo full-time y consultoría.',
     location: 'Latam, Remote',
     experience: '+6 años de experiencia en Producto',
     available: 'Disponible',
@@ -15,7 +15,7 @@ const translations = {
   en: {
     badges: ['Product Designer', 'UX Consultant'],
     greeting: 'Hi, I\'m',
-    description: 'Product Designer and UX Consultant with over 6 years of experience in digital product design, UX/UI, and product strategy.\n\nI specialize in Artificial Intelligence applied to Product Design, integrating AI-powered tools and workflows to optimize research, ideation, prototyping, and validation processes.\n\nI work with startups and companies as a UX consultant and freelancer, helping define real problems, make better product decisions, and design accessible, intuitive digital experiences aligned with business objectives.',
+    description: 'Product Designer and UX Consultant with over 6 years of experience in digital product design, UX/UI, and product strategy.\n\nI specialize in Artificial Intelligence applied to Product Design, integrating AI-powered tools and workflows to optimize research, ideation, prototyping, and validation processes.\n\nI work with startups and companies helping define real problems, make better product decisions, and design accessible, intuitive digital experiences aligned with business objectives.\n\nI\'m available for full-time roles and consulting.',
     location: 'Latam, Remote',
     experience: '+6 years of experience in Product',
     available: 'Available',
