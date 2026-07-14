@@ -44,7 +44,7 @@ const translations = {
   es: {
     backButton: 'Volver al Portfolio',
     hero: {
-      title: 'Áurea Design System',
+      title: 'Design System con AI',
       subtitle: 'De un repositorio vacío a un design system en código — con identidad de marca, arquitectura de tokens, 19 componentes accesibles (WCAG AA) y documentación de handoff — en un sprint de 7 días usando Claude Code como "junior de alta performance".',
       tags: ['Design Systems', 'Design Engineering', 'AI'],
       type: 'Rol',
@@ -161,7 +161,7 @@ const translations = {
   en: {
     backButton: 'Back to Portfolio',
     hero: {
-      title: 'Áurea Design System',
+      title: 'Design System with AI',
       subtitle: 'From an empty repository to a design system in code — brand identity, token architecture, 19 accessible components (WCAG AA) and handoff documentation — in a 7-day sprint using Claude Code as a "high-performance junior."',
       tags: ['Design Systems', 'Design Engineering', 'AI'],
       type: 'Role',
@@ -278,7 +278,7 @@ const translations = {
   pt: {
     backButton: 'Voltar ao Portfólio',
     hero: {
-      title: 'Áurea Design System',
+      title: 'Design System com AI',
       subtitle: 'De um repositório vazio a um design system em código — identidade de marca, arquitetura de tokens, 19 componentes acessíveis (WCAG AA) e documentação de handoff — em um sprint de 7 dias usando Claude Code como "junior de alta performance".',
       tags: ['Design Systems', 'Design Engineering', 'AI'],
       type: 'Papel',

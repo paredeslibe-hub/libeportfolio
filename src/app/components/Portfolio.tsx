@@ -73,7 +73,7 @@ const translations = {
         metric: '61% adopción de wallet · NPS 67'
       },
       {
-        title: 'Áurea Design System',
+        title: 'Design System con AI',
         category: 'Design Systems · AI',
         description: 'De repositorio vacío a un design system en código: identidad de marca, tokens en 3 capas y 19 componentes con accesibilidad WCAG AA en 7 días usando Claude Code.',
         image: designSystemImage,
@@ -165,7 +165,7 @@ const translations = {
         metric: '61% wallet adoption · NPS 67'
       },
       {
-        title: 'Áurea Design System',
+        title: 'Design System with AI',
         category: 'Design Systems · AI',
         description: 'From empty repository to a design system in code: brand identity, 3-layer tokens and 19 components with WCAG AA accessibility in 7 days using Claude Code.',
         image: designSystemImage,
@@ -257,7 +257,7 @@ const translations = {
         metric: '61% adoção de carteira · NPS 67'
       },
       {
-        title: 'Áurea Design System',
+        title: 'Design System com AI',
         category: 'Design Systems · AI',
         description: 'De repositório vazio a um design system em código: identidade de marca, tokens em 3 camadas e 19 componentes com acessibilidade WCAG AA em 7 dias usando Claude Code.',
         image: designSystemImage,
