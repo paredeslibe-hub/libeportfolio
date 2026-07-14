@@ -8,22 +8,22 @@ const translations = {
       {
         icon: Palette,
         title: 'Visual Design',
-        items: ['UI Design', 'Design Systems', 'Branding', 'Tipografía']
+        items: ['UI Design', 'Design Systems', 'Figma Variables & Tokens', 'Interaction Design']
       },
       {
         icon: Users,
         title: 'UX Research',
-        items: ['User Testing', 'Personas', 'Journey Maps', 'Interviews']
+        items: ['Moderated Testing · Maze', 'Journey Maps', 'Hotjar · Mixpanel', 'Entrevistas en profundidad']
       },
       {
         icon: Code,
         title: 'Herramientas',
-        items: ['Figma', 'Adobe XD', 'Inteligencia Artificial', 'UX Cam']
+        items: ['Figma (Expert)', 'ProtoPie · Framer', 'Claude · ChatGPT', 'Notion · Linear']
       },
       {
         icon: Zap,
         title: 'Metodologías',
-        items: ['Design Thinking', 'Agile', 'Lean UX', 'A/B Testing']
+        items: ['Design Thinking · Lean UX', 'Agile / Scrum', 'WCAG 2.1 AA · CCPA', 'Design Sprints']
       }
     ]
   },
@@ -34,22 +34,22 @@ const translations = {
       {
         icon: Palette,
         title: 'Visual Design',
-        items: ['UI Design', 'Design Systems', 'Branding', 'Typography']
+        items: ['UI Design', 'Design Systems', 'Figma Variables & Tokens', 'Interaction Design']
       },
       {
         icon: Users,
         title: 'UX Research',
-        items: ['User Testing', 'Personas', 'Journey Maps', 'Interviews']
+        items: ['Moderated Testing · Maze', 'Journey Maps', 'Hotjar · Mixpanel', 'In-depth Interviews']
       },
       {
         icon: Code,
         title: 'Tools',
-        items: ['Figma', 'Adobe XD', 'Artificial Intelligence', 'UX Cam']
+        items: ['Figma (Expert)', 'ProtoPie · Framer', 'Claude · ChatGPT', 'Notion · Linear']
       },
       {
         icon: Zap,
         title: 'Methodologies',
-        items: ['Design Thinking', 'Agile', 'Lean UX', 'A/B Testing']
+        items: ['Design Thinking · Lean UX', 'Agile / Scrum', 'WCAG 2.1 AA · CCPA', 'Design Sprints']
       }
     ]
   },
@@ -60,22 +60,22 @@ const translations = {
       {
         icon: Palette,
         title: 'Design Visual',
-        items: ['UI Design', 'Design Systems', 'Branding', 'Tipografia']
+        items: ['UI Design', 'Design Systems', 'Figma Variables & Tokens', 'Interaction Design']
       },
       {
         icon: Users,
         title: 'UX Research',
-        items: ['User Testing', 'Personas', 'Journey Maps', 'Entrevistas']
+        items: ['Testes Moderados · Maze', 'Journey Maps', 'Hotjar · Mixpanel', 'Entrevistas em profundidade']
       },
       {
         icon: Code,
         title: 'Ferramentas',
-        items: ['Figma', 'Adobe XD', 'Inteligência Artificial', 'UX Cam']
+        items: ['Figma (Expert)', 'ProtoPie · Framer', 'Claude · ChatGPT', 'Notion · Linear']
       },
       {
         icon: Zap,
         title: 'Metodologias',
-        items: ['Design Thinking', 'Agile', 'Lean UX', 'A/B Testing']
+        items: ['Design Thinking · Lean UX', 'Agile / Scrum', 'WCAG 2.1 AA · CCPA', 'Design Sprints']
       }
     ]
   }

@@ -6,10 +6,11 @@ interface ProjectCardProps {
   description: string;
   image: string;
   tags: string[];
+  metric?: string;
   onClick?: () => void;
 }
 
-export function ProjectCard({ title, category, description, image, tags, onClick }: ProjectCardProps) {
+export function ProjectCard({ title, category, description, image, tags, metric, onClick }: ProjectCardProps) {
   return (
     <div className="group cursor-pointer" onClick={onClick}>
       <div className="relative overflow-hidden rounded-2xl mb-4 bg-gray-100 aspect-[4/3]">
@@ -40,7 +41,13 @@ export function ProjectCard({ title, category, description, image, tags, onClick
         <p className="text-gray-600">
           {description}
         </p>
-        
+
+        {metric && (
+          <p className="text-sm font-medium text-orange-600 bg-orange-50 px-3 py-1.5 rounded-lg inline-block">
+            {metric}
+          </p>
+        )}
+
         <div className="flex flex-wrap gap-2 pt-2">
           {tags.map((tag, index) => (
             <span 

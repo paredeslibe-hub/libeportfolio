@@ -9,11 +9,13 @@ import { ProjectCard } from './ProjectCard';
 import { ProcessSection } from './ProcessSection';
 import { SkillsSection } from './SkillsSection';
 import { Footer } from './Footer';
+import { LlmContent } from './LlmContent';
 import neobankImage from 'figma:asset/68d178c25866b12853b6804246e6e0ae22433c62.png';
 import aiAppImage from 'figma:asset/f7019a472d51216b42b239ee9fe17e184e6ab10c.png';
 import portalCreditosImage from 'figma:asset/3c04df0eaf2b7d382be1902a474772a6edb62518.png';
 import petsAppImage from 'figma:asset/00d685f354a5612791b957f229b5d34ac1947585.png';
 import consultingImage from 'figma:asset/e2758ae3e941f516ffdbc201b6872ed01d207551.png';
+import designSystemImage from '../assets/design-system/screenshot-home.png';
 
 const translations = {
   es: {
@@ -43,28 +45,40 @@ const translations = {
         category: 'Fintech',
         description: 'Diseño de App para neobank en Brasil. Limites de crédito innovador.',
         image: neobankImage,
-        tags: ['Research', 'UX/UI', 'Strategy']
+        tags: ['Research', 'UX/UI', 'Strategy'],
+        metric: '−75% tiempo de solicitud · +40% satisfacción'
       },
       {
-        title: 'App con Inteligencia Artificial',
+        title: 'Soluciones Financieras con AI',
         category: 'Fintech',
-        description: 'App lanzada en USA que analiza los datos de los usuarios y responde con inteligencia artificial, ayudándolo a conseguir productos financieros.',
+        description: 'App financiera con integración de AI para trabajadores de aplicativos en los Estados Unidos que mejora su salud financiera con respuestas basadas en datos reales.',
         image: aiAppImage,
-        tags: ['AI', 'UX/UI', 'Research']
+        tags: ['AI', 'UX/UI', 'Research'],
+        metric: '52% aceptación de AI vs 30–35% benchmark'
       },
       {
         title: 'Portal de Créditos',
         category: 'Fintech',
         description: 'Plataforma de análisis de datos de trabajadores que ofrece productos financieros personalizados.',
         image: portalCreditosImage,
-        tags: ['UX/UI', 'Research', 'Análisis de datos']
+        tags: ['UX/UI', 'Research', 'Análisis de datos'],
+        metric: '+103% tasa de completitud · −45% tickets soporte'
       },
       {
         title: 'Wallet Pets App',
         category: 'Fintech',
         description: 'Aplicación para pedir comida de mascotas, ganar puntos y tener una billetera virtual para tu mascota.',
         image: petsAppImage,
-        tags: ['UX/UI', 'E-commerce', 'Wallet']
+        tags: ['UX/UI', 'E-commerce', 'Wallet'],
+        metric: '61% adopción de wallet · NPS 67'
+      },
+      {
+        title: 'Áurea Design System',
+        category: 'Design Systems · AI',
+        description: 'De repositorio vacío a un design system en código: identidad de marca, tokens en 3 capas y 19 componentes con accesibilidad WCAG AA en 7 días usando Claude Code.',
+        image: designSystemImage,
+        tags: ['Design Systems', 'AI', 'Design Engineering'],
+        metric: '19 componentes · 7 días · WCAG AA'
       }
     ],
     projectsSection: {
@@ -123,28 +137,40 @@ const translations = {
         category: 'Fintech',
         description: 'App design for a neobank in Brazil. Innovative credit limits.',
         image: neobankImage,
-        tags: ['Research', 'UX/UI', 'Strategy']
+        tags: ['Research', 'UX/UI', 'Strategy'],
+        metric: '−75% application time · +40% user satisfaction'
       },
       {
         title: 'AI-Powered App',
         category: 'Fintech',
         description: 'App launched in the USA that analyzes user data and responds with artificial intelligence, helping them obtain financial products.',
         image: aiAppImage,
-        tags: ['AI', 'UX/UI', 'Research']
+        tags: ['AI', 'UX/UI', 'Research'],
+        metric: '52% AI acceptance rate vs 30–35% benchmark'
       },
       {
         title: 'Credit Portal',
         category: 'Fintech',
         description: 'Worker data analysis platform that offers personalized financial products.',
         image: portalCreditosImage,
-        tags: ['UX/UI', 'Research', 'Data Analysis']
+        tags: ['UX/UI', 'Research', 'Data Analysis'],
+        metric: '+103% form completion · −45% support tickets'
       },
       {
         title: 'Wallet Pets App',
         category: 'Fintech',
         description: 'App where people can order pet food, earn points and have their own wallet for their pet.',
         image: petsAppImage,
-        tags: ['UX/UI', 'E-commerce', 'Wallet']
+        tags: ['UX/UI', 'E-commerce', 'Wallet'],
+        metric: '61% wallet adoption · NPS 67'
+      },
+      {
+        title: 'Áurea Design System',
+        category: 'Design Systems · AI',
+        description: 'From empty repository to a design system in code: brand identity, 3-layer tokens and 19 components with WCAG AA accessibility in 7 days using Claude Code.',
+        image: designSystemImage,
+        tags: ['Design Systems', 'AI', 'Design Engineering'],
+        metric: '19 components · 7 days · WCAG AA'
       }
     ],
     projectsSection: {
@@ -203,28 +229,40 @@ const translations = {
         category: 'Fintech',
         description: 'Design de App para neobank no Brasil. Limites de crédito inovadores.',
         image: neobankImage,
-        tags: ['Research', 'UX/UI', 'Strategy']
+        tags: ['Research', 'UX/UI', 'Strategy'],
+        metric: '−75% tempo de solicitação · +40% satisfação'
       },
       {
         title: 'App com Inteligência Artificial',
         category: 'Fintech',
         description: 'App lançado nos EUA que analisa os dados dos usuários e responde com inteligência artificial, ajudando-os a obter produtos financeiros.',
         image: aiAppImage,
-        tags: ['AI', 'UX/UI', 'Research']
+        tags: ['AI', 'UX/UI', 'Research'],
+        metric: '52% aceitação de IA vs benchmark 30–35%'
       },
       {
         title: 'Portal de Créditos',
         category: 'Fintech',
         description: 'Plataforma de análise de dados de trabalhadores que oferece produtos financeiros personalizados.',
         image: portalCreditosImage,
-        tags: ['UX/UI', 'Research', 'Análise de dados']
+        tags: ['UX/UI', 'Research', 'Análise de dados'],
+        metric: '+103% taxa de conclusão · −45% tickets de suporte'
       },
       {
         title: 'Wallet Pets App',
         category: 'Fintech',
         description: 'Aplicativo para pedir comida de animais de estimação, ganhar pontos e ter uma carteira virtual para seu pet.',
         image: petsAppImage,
-        tags: ['UX/UI', 'E-commerce', 'Wallet']
+        tags: ['UX/UI', 'E-commerce', 'Wallet'],
+        metric: '61% adoção de carteira · NPS 67'
+      },
+      {
+        title: 'Áurea Design System',
+        category: 'Design Systems · AI',
+        description: 'De repositório vazio a um design system em código: identidade de marca, tokens em 3 camadas e 19 componentes com acessibilidade WCAG AA em 7 dias usando Claude Code.',
+        image: designSystemImage,
+        tags: ['Design Systems', 'AI', 'Design Engineering'],
+        metric: '19 componentes · 7 dias · WCAG AA'
       }
     ],
     projectsSection: {
@@ -484,7 +522,8 @@ export function Portfolio() {
                     index === 0 ? () => navigate('/proyectos/neobank') :
                     index === 1 ? () => navigate('/proyectos/ai-app') :
                     index === 2 ? () => navigate('/proyectos/portal-creditos') :
-                    () => navigate('/proyectos/pets-app')
+                    index === 3 ? () => navigate('/proyectos/pets-app') :
+                    () => navigate('/proyectos/design-system')
                   }
                 />
               </div>
@@ -586,6 +625,9 @@ export function Portfolio() {
       <div id="contacto" className="relative">
         <Footer language={language} />
       </div>
+
+      {/* LLM / AI Optimization Layer — visually hidden, semantically rich */}
+      <LlmContent />
 
       {/* WhatsApp Floating Button */}
       <a

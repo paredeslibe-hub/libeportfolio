@@ -1,15 +1,12 @@
 import image_68d178c25866b12853b6804246e6e0ae22433c62 from 'figma:asset/68d178c25866b12853b6804246e6e0ae22433c62.png';
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router';
-import imgImage96 from "figma:asset/a226074eca8c2225ce5a6f03f90ffa7e4d8eef7d.png";
-import imgImage97 from "figma:asset/b9e562fdd682835574b7947876cc0984a2fa4cc5.png";
+import imgImage97 from "@/imports/whatsapp-validation-anon.png";
 import imgNome11 from "figma:asset/66b357a28c4815bbb9f0df40ce28854af290dcc6.png";
 import imgOnboarding11 from "figma:asset/29fe268c0f9d7ca5eff7ea7cc8dd07d1d2ea62ab.png";
-import imgImage101 from "figma:asset/ff7cec2b5d9e9252e5b997f153b0b12fa68034a6.png";
 import imgRoadmap from "figma:asset/ab95d16e568df4c66c58956a7bca40e820060e8c.png";
 import imgIPhone16Pro from "figma:asset/d54be5559cc7e1deac438ee76344e08f3a160639.png";
 import imgAnalisisDatos from "figma:asset/a1c2c96fdcd93de9ef55f3e8a4cc796a3453c3c4.png";
-import imgHeaderDashboard from "figma:asset/1baf62ca9e4e75d64a3a6485a6f4ae0f7b7d4596.png";
 
 interface NeobankPageProps {
   language?: 'es' | 'en' | 'pt';
@@ -44,7 +41,31 @@ const translations = {
       step3Title: 'Roadmap del MVP',
       step3Desc: 'Hicimos roadmap para hacer el desarrollo y lanzamiento de un MVP en sólo 4 meses.',
       step4Title: 'Diseño del Onboarding',
-      step4Desc: 'Lo primero que diseñamos y lanzamos fue el Onboarding para poder empezar a registrar usuarios segmentados y continuar mejorando el producto según la información que obtuviéramos de los usuarios registrados.'
+      step4Desc: 'Lo primero que diseñamos y lanzamos fue el Onboarding para poder empezar a registrar usuarios segmentados y continuar mejorando el producto según la información que obtuviéramos de los usuarios registrados.',
+      chartTitle: 'Validación por WhatsApp',
+      chartReadRate: 'tasa de lectura',
+      chartSent: 'Mensajes enviados',
+      chartDelivered: 'Entregados',
+      chartRead: 'Leídos',
+      chartSentValue: '2.000',
+      chartDeliveredValue: '1.900',
+      chartReadValue: '1.300',
+      chartCaption: 'Campaña enviada a los usuarios con mejor reputación del portal anterior para validar el interés en un límite de crédito personal.'
+    },
+    decisions: {
+      title: 'Decisiones de Diseño',
+      subtitle: 'Tres decisiones definieron el rumbo del producto. Cada una tenía una alternativa más obvia que descartamos a propósito.',
+      d1Title: 'Lanzar el onboarding antes que el producto',
+      d1Alt: 'La alternativa: esperar a tener la app completa para lanzar todo junto.',
+      d1Why: 'Publicar primero el onboarding nos permitió registrar usuarios segmentados desde la semana uno y diseñar el resto del producto con datos de personas reales, no con supuestos.',
+      d2Title: 'Validar por WhatsApp, no con encuestas formales',
+      d2Alt: 'La alternativa: un proceso de research tradicional con entrevistas y encuestas.',
+      d2Why: 'Nuestros usuarios ya vivían en WhatsApp. Llegar por ese canal nos dio respuesta en días, con costo casi cero, y midió interés real (lecturas y clics) en lugar de intención declarada.',
+      d3Title: 'Un solo trabajo: el límite de crédito',
+      d3Alt: 'La alternativa: replicar todas las funcionalidades del portal anterior.',
+      d3Why: 'Las métricas mostraban que el interés de los usuarios se concentraba en obtener crédito rápido. Recortar todo lo demás fue lo que hizo posible un MVP en 4 meses.',
+      altLabel: 'Alternativa descartada',
+      whyLabel: 'Por qué'
     },
     screens: {
       title: 'Pantallas Principales',
@@ -60,8 +81,8 @@ const translations = {
     results: {
       title: 'Resultados',
       months: 'Meses de desarrollo',
-      conversion: 'Tasa de conversión en onboarding',
-      users: 'Usuarios registrados en el primer mes',
+      conversion: 'De los usuarios que iniciaron el onboarding lo completaron',
+      users: 'Usuarios registrados en el primer mes del MVP',
       impactTitle: 'Impacto del Proyecto',
       impact1: 'Reducción del 60% en el tiempo de solicitud de crédito',
       impact2: 'Aumento del 40% en la satisfacción del usuario comparado con la versión anterior',
@@ -102,7 +123,31 @@ const translations = {
       step3Title: 'MVP Roadmap',
       step3Desc: 'We created a roadmap to develop and launch an MVP in just 4 months.',
       step4Title: 'Onboarding Design',
-      step4Desc: 'The first thing we designed and launched was the Onboarding to start registering segmented users and continue improving the product based on the information we obtained from registered users.'
+      step4Desc: 'The first thing we designed and launched was the Onboarding to start registering segmented users and continue improving the product based on the information we obtained from registered users.',
+      chartTitle: 'WhatsApp Validation',
+      chartReadRate: 'read rate',
+      chartSent: 'Messages sent',
+      chartDelivered: 'Delivered',
+      chartRead: 'Read',
+      chartSentValue: '2,000',
+      chartDeliveredValue: '1,900',
+      chartReadValue: '1,300',
+      chartCaption: 'Campaign sent to the previous portal\'s best-reputation users to validate interest in a personal credit limit.'
+    },
+    decisions: {
+      title: 'Design Decisions',
+      subtitle: 'Three decisions shaped the product\'s direction. Each had a more obvious alternative that we deliberately discarded.',
+      d1Title: 'Launch the onboarding before the product',
+      d1Alt: 'The alternative: wait for the full app and launch everything at once.',
+      d1Why: 'Shipping the onboarding first let us register segmented users from week one and design the rest of the product with data from real people, not assumptions.',
+      d2Title: 'Validate via WhatsApp, not formal surveys',
+      d2Alt: 'The alternative: a traditional research process with interviews and surveys.',
+      d2Why: 'Our users already lived on WhatsApp. Reaching them there gave us answers in days, at near-zero cost, and measured real interest (reads and clicks) instead of stated intent.',
+      d3Title: 'One job only: the credit limit',
+      d3Alt: 'The alternative: replicate every feature of the previous portal.',
+      d3Why: 'Metrics showed user interest was concentrated on getting credit fast. Cutting everything else is what made a 4-month MVP possible.',
+      altLabel: 'Discarded alternative',
+      whyLabel: 'Why'
     },
     screens: {
       title: 'Main Screens',
@@ -118,8 +163,8 @@ const translations = {
     results: {
       title: 'Results',
       months: 'Months of development',
-      conversion: 'Onboarding conversion rate',
-      users: 'Users registered in the first month',
+      conversion: 'Of users who started onboarding completed it',
+      users: 'Users registered in the MVP\'s first month',
       impactTitle: 'Project Impact',
       impact1: '60% reduction in credit application time',
       impact2: '40% increase in user satisfaction compared to the previous version',
@@ -160,7 +205,31 @@ const translations = {
       step3Title: 'Roadmap do MVP',
       step3Desc: 'Fizemos um roadmap para fazer o desenvolvimento e lançamento de um MVP em apenas 4 meses.',
       step4Title: 'Design do Onboarding',
-      step4Desc: 'A primeira coisa que projetamos e lançamos foi o Onboarding para poder começar a registrar usuários segmentados e continuar melhorando o produto segundo a informação que obtivéssemos dos usuários registrados.'
+      step4Desc: 'A primeira coisa que projetamos e lançamos foi o Onboarding para poder começar a registrar usuários segmentados e continuar melhorando o produto segundo a informação que obtivéssemos dos usuários registrados.',
+      chartTitle: 'Validação por WhatsApp',
+      chartReadRate: 'taxa de leitura',
+      chartSent: 'Mensagens enviadas',
+      chartDelivered: 'Entregues',
+      chartRead: 'Lidas',
+      chartSentValue: '2.000',
+      chartDeliveredValue: '1.900',
+      chartReadValue: '1.300',
+      chartCaption: 'Campanha enviada aos usuários com melhor reputação do portal anterior para validar o interesse em um limite de crédito pessoal.'
+    },
+    decisions: {
+      title: 'Decisões de Design',
+      subtitle: 'Três decisões definiram o rumo do produto. Cada uma tinha uma alternativa mais óbvia que descartamos de propósito.',
+      d1Title: 'Lançar o onboarding antes do produto',
+      d1Alt: 'A alternativa: esperar o app completo para lançar tudo junto.',
+      d1Why: 'Publicar primeiro o onboarding nos permitiu registrar usuários segmentados desde a primeira semana e projetar o resto do produto com dados de pessoas reais, não com suposições.',
+      d2Title: 'Validar pelo WhatsApp, não com pesquisas formais',
+      d2Alt: 'A alternativa: um processo de research tradicional com entrevistas e questionários.',
+      d2Why: 'Nossos usuários já viviam no WhatsApp. Chegar por esse canal nos deu resposta em dias, com custo quase zero, e mediu interesse real (leituras e cliques) em vez de intenção declarada.',
+      d3Title: 'Um único trabalho: o limite de crédito',
+      d3Alt: 'A alternativa: replicar todas as funcionalidades do portal anterior.',
+      d3Why: 'As métricas mostravam que o interesse dos usuários se concentrava em obter crédito rápido. Cortar todo o resto foi o que tornou possível um MVP em 4 meses.',
+      altLabel: 'Alternativa descartada',
+      whyLabel: 'Por quê'
     },
     screens: {
       title: 'Telas Principais',
@@ -176,8 +245,8 @@ const translations = {
     results: {
       title: 'Resultados',
       months: 'Meses de desenvolvimento',
-      conversion: 'Taxa de conversão em onboarding',
-      users: 'Usuários registrados no primeiro mês',
+      conversion: 'Dos usuários que iniciaram o onboarding o completaram',
+      users: 'Usuários registrados no primeiro mês do MVP',
       impactTitle: 'Impacto do Projeto',
       impact1: 'Redução de 60% no tempo de solicitação de crédito',
       impact2: 'Aumento de 40% na satisfação do usuário comparado com a versão anterior',
@@ -302,7 +371,34 @@ export function NeobankPage({ language = 'es' }: NeobankPageProps) {
                 </div>
               </div>
               <div className="order-1 md:order-2">
-                <img src={imgImage96} alt="Validación" className="w-full rounded-xl shadow-lg" />
+                <div className="bg-white rounded-2xl shadow-lg p-8">
+                  <p className="text-sm text-gray-500 mb-1">{t.methodology.chartTitle}</p>
+                  <div className="flex items-baseline gap-2 mb-8">
+                    <span className="text-5xl font-bold text-orange-500">69%</span>
+                    <span className="text-gray-600">{t.methodology.chartReadRate}</span>
+                  </div>
+                  <div className="space-y-5">
+                    {[
+                      { label: t.methodology.chartSent, value: t.methodology.chartSentValue, pct: 100 },
+                      { label: t.methodology.chartDelivered, value: t.methodology.chartDeliveredValue, pct: 95 },
+                      { label: t.methodology.chartRead, value: t.methodology.chartReadValue, pct: 65 },
+                    ].map((row) => (
+                      <div key={row.label}>
+                        <div className="flex justify-between text-sm mb-1.5">
+                          <span className="text-gray-700">{row.label}</span>
+                          <span className="text-gray-900 font-medium">{row.value}</span>
+                        </div>
+                        <div className="h-3 bg-gray-100 rounded-full">
+                          <div
+                            className="h-full bg-orange-500 rounded-full"
+                            style={{ width: `${row.pct}%` }}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="text-xs text-gray-500 mt-8">{t.methodology.chartCaption}</p>
+                </div>
               </div>
             </div>
 
@@ -367,31 +463,65 @@ export function NeobankPage({ language = 'es' }: NeobankPageProps) {
         </div>
       </section>
 
-      {/* Screens Preview */}
+      {/* Design Decisions */}
       <section className="py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl mb-4 text-gray-900">{t.decisions.title}</h2>
+          <p className="text-lg text-gray-600 mb-12 max-w-3xl">{t.decisions.subtitle}</p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { title: t.decisions.d1Title, alt: t.decisions.d1Alt, why: t.decisions.d1Why },
+              { title: t.decisions.d2Title, alt: t.decisions.d2Alt, why: t.decisions.d2Why },
+              { title: t.decisions.d3Title, alt: t.decisions.d3Alt, why: t.decisions.d3Why },
+            ].map((decision, index) => (
+              <div
+                key={decision.title}
+                className="bg-gray-50 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+              >
+                <div className="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">
+                  {index + 1}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{decision.title}</h3>
+                <p className="text-sm text-gray-500 mb-1 font-medium uppercase tracking-wide">
+                  {t.decisions.altLabel}
+                </p>
+                <p className="text-gray-600 mb-4">{decision.alt}</p>
+                <p className="text-sm text-orange-500 mb-1 font-medium uppercase tracking-wide">
+                  {t.decisions.whyLabel}
+                </p>
+                <p className="text-gray-700">{decision.why}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Screens Preview */}
+      <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl mb-12 text-gray-900 text-center">{t.screens.title}</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-gray-50 rounded-xl p-6">
+            <div className="bg-white rounded-xl p-6">
               <img src={imgOnboarding11} alt="Onboarding" className="w-full rounded-lg shadow-md mb-4" />
               <h3 className="font-semibold text-gray-900 mb-2">{t.screens.onboarding}</h3>
               <p className="text-sm text-gray-600">{t.screens.onboardingDesc}</p>
             </div>
             
-            <div className="bg-gray-50 rounded-xl p-6">
+            <div className="bg-white rounded-xl p-6">
               <img src={imgNome11} alt="Registro de Usuario" className="w-full rounded-lg shadow-md mb-4" />
               <h3 className="font-semibold text-gray-900 mb-2">{t.screens.registration}</h3>
               <p className="text-sm text-gray-600">{t.screens.registrationDesc}</p>
             </div>
             
-            <div className="bg-gray-50 rounded-xl p-6">
+            <div className="bg-white rounded-xl p-6">
               <img src={imgAnalisisDatos} alt="Análisis de Datos" className="w-full rounded-lg shadow-md mb-4" />
               <h3 className="font-semibold text-gray-900 mb-2">{t.screens.dataAnalysis}</h3>
               <p className="text-sm text-gray-600">{t.screens.dataAnalysisDesc}</p>
             </div>
             
-            <div className="bg-gray-50 rounded-xl p-6">
+            <div className="bg-white rounded-xl p-6">
               <img src={imgIPhone16Pro} alt="Dashboard Principal" className="w-full rounded-lg shadow-md mb-4" />
               <h3 className="font-semibold text-gray-900 mb-2">{t.screens.dashboard}</h3>
               <p className="text-sm text-gray-600">{t.screens.dashboardDesc}</p>
@@ -451,13 +581,6 @@ export function NeobankPage({ language = 'es' }: NeobankPageProps) {
               </li>
             </ul>
           </div>
-        </div>
-      </section>
-
-      {/* Full Screen Preview */}
-      <section className="py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <img src={imgImage101} alt="Full Preview" className="w-full rounded-2xl shadow-2xl" />
         </div>
       </section>
 

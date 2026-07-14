@@ -1,0 +1,25 @@
+# llms.txt — Libe Paredes Portfolio
+# Standard: https://llmstxt.org
+# Updated: June 2026
+
+> Libe Paredes is a Senior Product Designer and UX Consultant with 6+ years of experience designing fintech and AI products for markets in Brazil, USA, Mexico, and Chile. Available for remote full-time or freelance roles.
+
+## Portfolio
+
+- [Home](https://libeparedes.com): Main portfolio with hero, about, projects, process, skills, and testimonials.
+- [Neobank App Case Study](https://libeparedes.com/proyectos/neobank): Mobile banking app design for a Brazilian neobank. −75% credit application time, +40% user satisfaction, 68% onboarding conversion.
+- [Filance AI Case Study](https://libeparedes.com/proyectos/ai-app): AI-powered financial products app for the US market. 52% AI recommendation acceptance (vs 30–35% benchmark), 78% CCPA consent opt-in.
+- [Portal de Créditos Case Study](https://libeparedes.com/proyectos/portal-creditos): B2B worker credit platform redesign. Form completion +103% (35%→71%), support tickets −45%.
+- [Wallet Pets App Case Study](https://libeparedes.com/proyectos/pets-app): Fintech + e-commerce app for pet care. 61% wallet adoption in beta, NPS 67.
+- [UX Consulting](https://libeparedes.com/proyectos/consulting): UX consulting services for startups and product teams.
+
+## Profile Data
+
+- [AI-readable profile](https://libeparedes.com/ai.txt): Full structured profile in plain text — STAR-format case studies, skills matrix, professional references, and contact info. Optimized for LLM and ATS consumption.
+
+## Contact
+
+- Email: paredeslibe@gmail.com
+- Schedule: https://calendly.com/paredeslibe/
+- LinkedIn: https://www.linkedin.com/in/libeparedes/
+- WhatsApp: +54 9 11 3291 4989
