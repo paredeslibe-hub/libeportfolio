@@ -144,7 +144,7 @@ RESULT:
 Role: UX/UI Designer
 Client: Confidential (Mexico / Chile)
 Industry: Fintech / HR Tech / Lending
-Timeline: 3 months
+Timeline: 18 months
 
 SITUATION:
 A B2B fintech company aggregated employment and salary data from partner employers to offer personalized credit products directly to workers. The existing worker-facing portal had confusing navigation, an opaque eligibility process, and a 65% form abandonment rate on credit applications. Customer support was being overwhelmed by avoidable UX-related queries.
@@ -165,7 +165,7 @@ RESULT:
 - Customer support tickets related to UX confusion decreased by 45% in the 60 days post-launch
 - Average session duration decreased by 28% (positive signal: users found information faster)
 - Time-to-complete a credit application reduced from 18 minutes to 6 minutes
-- Full design delivery and dev handoff completed within the 3-month timeline
+- Full design delivery and dev handoff completed within the 18-month timeline
 
 ---
 

@@ -81,7 +81,18 @@ const services = [
   },
 ];
 
-const portfolioItems = [
+interface PortfolioItem {
+  id: number;
+  category: string;
+  label: string;
+  description: string;
+  image: string;
+  video?: string;
+  mockup?: 'desktop' | 'mobile';
+  tall: boolean;
+}
+
+const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
     category: 'Social Media',

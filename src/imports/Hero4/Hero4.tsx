@@ -61,7 +61,7 @@ function Text1() {
 
 function SocialLink() {
   return (
-    <div className="relative shrink-0 size-[43px]" data-name="Social link 2" role="button" tabIndex="0">
+    <div className="relative shrink-0 size-[43px]" data-name="Social link 2" role="button" tabIndex={0}>
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 43 43">
         <g clipPath="url(#clip0_100_593)" id="Social link 2">
           <g id="Vector">

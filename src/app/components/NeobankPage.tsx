@@ -8,7 +8,6 @@ import imgRoadmap from "figma:asset/ab95d16e568df4c66c58956a7bca40e820060e8c.png
 import imgIPhone16Pro from "figma:asset/d54be5559cc7e1deac438ee76344e08f3a160639.png";
 import imgAnalisisDatos from "figma:asset/a1c2c96fdcd93de9ef55f3e8a4cc796a3453c3c4.png";
 import imgResearchSurvey from "../../../assets/project-1/research-project-1.png";
-import imgOnboardingFlow from "../../../assets/project-1/onboarding-flow-1.png";
 
 interface NeobankPageProps {
   language?: 'es' | 'en' | 'pt';
@@ -462,25 +461,18 @@ export function NeobankPage({ language = 'es' }: NeobankPageProps) {
             </div>
 
             {/* Step 4 */}
-            <div>
-              <div className="max-w-3xl mx-auto">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center text-xl font-bold">
-                    4
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.methodology.step4Title}</h3>
-                    <p className="text-gray-700">
-                      {t.methodology.step4Desc}
-                    </p>
-                  </div>
+            <div className="max-w-3xl mx-auto">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center text-xl font-bold">
+                  4
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{t.methodology.step4Title}</h3>
+                  <p className="text-gray-700">
+                    {t.methodology.step4Desc}
+                  </p>
                 </div>
               </div>
-              <img
-                src={imgOnboardingFlow}
-                alt={t.methodology.step4Title}
-                className="w-full rounded-xl shadow-lg mt-8"
-              />
             </div>
           </div>
         </div>
