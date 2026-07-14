@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'motion/react';
-import imgMePhoto from '../../imports/me_photo.png';
+import imgMePhoto from '../../assets/profile/libe-hero-photo.png';
 import videoSrc from '../../imports/Gradient_with_subtle_movement_delpmaspu_.mp4';
 
 interface NewHeroProps {
