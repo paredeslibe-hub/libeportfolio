@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import imgMePhoto from '../../assets/profile/libe-hero-photo.png';
-import videoSrc from '../../imports/Gradient_with_subtle_movement_delpmaspu_.mp4';
+import videoWebm from '../../assets/hero/hero-gradient.webm';
+import videoMp4 from '../../assets/hero/hero-gradient.mp4';
 
 interface NewHeroProps {
   language?: 'es' | 'en' | 'pt';
@@ -30,7 +31,8 @@ export function NewHero({ language = 'es' }: NewHeroProps) {
           className="absolute inset-0 w-full h-full object-cover opacity-50"
           controlsList="nodownload"
         >
-          <source src={videoSrc} type="video/mp4" />
+          <source src={videoWebm} type="video/webm" />
+          <source src={videoMp4} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-white/30" />
       </div>
