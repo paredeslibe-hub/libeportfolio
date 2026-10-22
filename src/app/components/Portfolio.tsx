@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router';
+import { Link } from 'react-router';
 import { Menu, X, Globe, Calendar, Info, MessageCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import { trackWhatsAppClick } from '../utils/analytics';
 import { useLanguage } from '../context/LanguageContext';
@@ -382,7 +382,6 @@ function TestimonialsCarousel({ items }: { items: TestimonialItem[] }) {
 }
 
 export function Portfolio() {
-  const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { language, setLanguage } = useLanguage();
 
@@ -518,12 +517,12 @@ export function Portfolio() {
               >
                 <ProjectCard
                   {...project}
-                  onClick={
-                    index === 0 ? () => navigate('/proyectos/neobank') :
-                    index === 1 ? () => navigate('/proyectos/ai-app') :
-                    index === 2 ? () => navigate('/proyectos/portal-creditos') :
-                    index === 3 ? () => navigate('/proyectos/pets-app') :
-                    () => navigate('/proyectos/design-system')
+                  href={
+                    index === 0 ? '/proyectos/neobank' :
+                    index === 1 ? '/proyectos/ai-app' :
+                    index === 2 ? '/proyectos/portal-creditos' :
+                    index === 3 ? '/proyectos/pets-app' :
+                    '/proyectos/design-system'
                   }
                 />
               </div>
@@ -567,13 +566,13 @@ export function Portfolio() {
                   <Calendar size={20} />
                   {t.consulting.scheduleButton}
                 </a>
-                <button
-                  onClick={() => navigate('/proyectos/consulting')}
+                <Link
+                  to="/proyectos/consulting"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3 border-2 border-orange-500 text-orange-600 rounded-lg hover:bg-orange-50 transition-colors"
                 >
                   <Info size={20} />
                   {t.consulting.learnMoreButton}
-                </button>
+                </Link>
               </div>
             </div>
 

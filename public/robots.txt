@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /carousel-preview
+
+Sitemap: https://libeparedes.com/sitemap.xml

@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import { ArrowUpRight } from 'lucide-react';
 
 interface ProjectCardProps {
@@ -7,12 +8,12 @@ interface ProjectCardProps {
   image: string;
   tags: string[];
   metric?: string;
-  onClick?: () => void;
+  href: string;
 }
 
-export function ProjectCard({ title, category, description, image, tags, metric, onClick }: ProjectCardProps) {
+export function ProjectCard({ title, category, description, image, tags, metric, href }: ProjectCardProps) {
   return (
-    <div className="group cursor-pointer" onClick={onClick}>
+    <Link to={href} className="group block cursor-pointer">
       <div className="relative overflow-hidden rounded-2xl mb-4 bg-gray-100 aspect-[4/3]">
         <img 
           src={image} 
@@ -59,6 +60,6 @@ export function ProjectCard({ title, category, description, image, tags, metric,
           ))}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
