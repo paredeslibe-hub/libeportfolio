@@ -1,8 +1,10 @@
 import { useEffect, Component, ReactNode } from 'react';
-import { RouterProvider } from 'react-router';
-import { router } from './routes';
+import { RouterProvider, createBrowserRouter } from 'react-router';
+import { routes } from './routes';
 import { initGA } from './utils/analytics';
 import { LanguageProvider } from './context/LanguageContext';
+
+const router = createBrowserRouter(routes);
 
 class ErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean }> {
   constructor(props: { children: ReactNode }) {

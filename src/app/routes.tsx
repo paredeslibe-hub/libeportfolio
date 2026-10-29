@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router';
+import type { RouteObject } from 'react-router';
 import { Layout } from './components/Layout';
 import { Portfolio } from './components/Portfolio';
 import { CarouselPreview } from './components/CarouselPreview';
@@ -48,7 +48,7 @@ function NotFoundRoute() {
   return <NotFoundPage language={language} />;
 }
 
-export const router = createBrowserRouter([
+export const routes: RouteObject[] = [
   {
     element: <Layout />,
     children: [
@@ -65,4 +65,4 @@ export const router = createBrowserRouter([
       { path: '*', element: <NotFoundRoute /> },
     ],
   },
-]);
+];
