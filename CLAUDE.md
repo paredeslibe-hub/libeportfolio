@@ -65,10 +65,16 @@ src/
 │   │   ├── SkillsSection.tsx      # Grid de habilidades
 │   │   ├── ConsultingPage.tsx     # Consultoría UX (case study)
 │   │   ├── LeadCaptureLP.tsx      # Landing page /negocios
+│   │   ├── RealEstateLP.tsx       # Landing page /imobiliario
 │   │   ├── NeobankPage.tsx        # Case study Neobank
+│   │   ├── AiAppPage.tsx          # Case study App Fintech AI
+│   │   ├── DesignSystemPage.tsx   # Case study Design System
 │   │   ├── PortalCreditosPage.tsx # Case study Portal de Créditos
 │   │   ├── PetsAppPage.tsx        # Case study Pets App (Fintech)
-│   │   ├── ComingSoonPage.tsx     # Placeholder para AI App
+│   │   ├── NotFoundPage.tsx       # Página 404 (ruta `*`)
+│   │   ├── LlmContent.tsx         # Capa sr-only con el perfil para crawlers y LLMs
+│   │   ├── CarouselPreview.tsx    # Preview interno de carruseles (fuera del sitemap)
+│   │   ├── ComingSoonPage.tsx     # Placeholder genérico (sin uso actualmente)
 │   │   ├── figma/
 │   │   │   └── ImageWithFallback.tsx
 │   │   └── ui/                    # Librería shadcn/ui completa (Radix-based)
@@ -96,11 +102,15 @@ src/
 |------|-----------|--------|
 | `/` | `Portfolio` | Activo |
 | `/negocios` | `LeadCaptureLP` | Activo |
+| `/imobiliario` | `RealEstateLP` | Activo |
 | `/proyectos/neobank` | `NeobankPage` | Activo |
 | `/proyectos/consulting` | `ConsultingPage` | Activo |
-| `/proyectos/ai-app` | `ComingSoonPage` | Coming soon |
+| `/proyectos/ai-app` | `AiAppPage` | Activo |
+| `/proyectos/design-system` | `DesignSystemPage` | Activo |
 | `/proyectos/portal-creditos` | `PortalCreditosPage` | Activo |
 | `/proyectos/pets-app` | `PetsAppPage` | Activo |
+| `/carousel-preview` | `CarouselPreview` | Interno (bloqueado en robots.txt) |
+| `*` | `NotFoundPage` | Activo |
 
 ---
 
@@ -194,13 +204,13 @@ Ver `GOOGLE_ANALYTICS.md` para setup y eventos personalizados.
 ## Backlog — Tareas pendientes
 
 ### Alta prioridad
-- [ ] **Case study AI App** — Reemplazar `ComingSoonPage` con contenido real del proyecto IA
+- [x] **Case study AI App** — Reemplazar `ComingSoonPage` con contenido real del proyecto IA
 - [ ] **SEO meta tags** — Agregar `<title>`, `<meta description>`, Open Graph por ruta (React Helmet o equivalente)
 - [ ] **Lazy loading de rutas** — Convertir imports de páginas a `React.lazy()` + `<Suspense>` para reducir bundle inicial
 - [ ] **Optimización de imágenes** — Convertir PNGs en `src/imports/` a WebP/AVIF con `sharp-cli` (ya instalado)
 
 ### Media prioridad
-- [ ] **404 page** — Agregar ruta `*` con página de error personalizada en `routes.tsx`
+- [x] **404 page** — Agregar ruta `*` con página de error personalizada en `routes.tsx`
 - [ ] **Scroll progress indicator** — Barra de progreso en case studies largos (Neobank, Portal Créditos)
 - [ ] **Transiciones entre rutas** — Animación de fade/slide al navegar entre páginas con Motion
 - [ ] **Preloader / skeleton** — Estados de carga para imágenes pesadas en case studies
@@ -208,8 +218,8 @@ Ver `GOOGLE_ANALYTICS.md` para setup y eventos personalizados.
 - [ ] **Dark mode** — Preparar tokens en `theme.css` para modo oscuro (next-themes ya instalado)
 
 ### Baja prioridad / Mejoras futuras
-- [ ] **Sitemap.xml** — Generación automática para SEO
-- [ ] **robots.txt** — Configurar correctamente para indexación
+- [x] **Sitemap.xml** — Creado a mano en `public/sitemap.xml` (actualizar al agregar rutas)
+- [x] **robots.txt** — Configurar correctamente para indexación
 - [ ] **PWA / manifest.json** — Para instalabilidad en mobile
 - [ ] **Test del bundle** — Analizar con `vite-bundle-visualizer` qué pesa más
 - [ ] **Refactor i18n** — Evaluar mover traducciones a archivos JSON separados si el sitio crece
@@ -220,7 +230,7 @@ Ver `GOOGLE_ANALYTICS.md` para setup y eventos personalizados.
 
 ## Notas importantes
 
-- `node_modules/` está versionado en el repo remoto (no debería estarlo — hay un `.gitignore` pendiente de ajustar)
+- `node_modules/` dejó de versionarse en octubre de 2026, pero sigue en el historial de git (el repo sigue pesando)
 - En Windows, habilitar long paths con: `git config --global core.longpaths true`
 - `__figma__entrypoint__.ts` es el punto de entrada para Figma Make — no modificar
 - `.figma/` contiene configuración de la integración Figma Make — no versionar datos sensibles
