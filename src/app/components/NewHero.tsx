@@ -49,7 +49,7 @@ export function NewHero({ language = 'es' }: NewHeroProps) {
             {t.greeting}
           </motion.p>
 
-          <div className="font-['Consolas',monospace] text-gray-900 leading-tight text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+          <h1 className="font-['Consolas',monospace] font-normal text-gray-900 leading-tight text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
             <motion.span
               className="block"
               initial={{ opacity: 0, x: -40 }}
@@ -66,7 +66,7 @@ export function NewHero({ language = 'es' }: NewHeroProps) {
             >
               {t.title2}
             </motion.span>
-          </div>
+          </h1>
         </div>
       </div>
 
@@ -98,7 +98,7 @@ export function NewHero({ language = 'es' }: NewHeroProps) {
           {t.greeting}
         </motion.p>
 
-        <div className="font-['Consolas',monospace] text-gray-900 leading-tight text-4xl text-center mb-12">
+        <h1 className="font-['Consolas',monospace] font-normal text-gray-900 leading-tight text-4xl text-center mb-12">
           <motion.span
             className="block"
             initial={{ opacity: 0, x: -30 }}
@@ -115,7 +115,7 @@ export function NewHero({ language = 'es' }: NewHeroProps) {
           >
             {t.title2}
           </motion.span>
-        </div>
+        </h1>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.85 }}

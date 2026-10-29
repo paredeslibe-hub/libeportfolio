@@ -178,12 +178,6 @@ export function RealEstateLP() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  useEffect(() => {
-    const prev = document.title;
-    document.title = 'Marketing Visual & Design | Libe Paredes';
-    return () => { document.title = prev; };
-  }, []);
-
   const openWhatsApp = (message: string) => {
     window.open(
       `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,
