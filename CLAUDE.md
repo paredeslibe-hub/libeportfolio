@@ -39,6 +39,9 @@ pnpm build
 
 # Preview del build
 pnpm preview
+
+# Tests (node:test; requiere Node ≥ 23.6)
+pnpm test
 ```
 
 > **Nota Windows:** Los paths de `node_modules` pueden superar el límite de 260 caracteres.
@@ -53,6 +56,7 @@ src/
 ├── app/
 │   ├── App.tsx                    # Root: ErrorBoundary + LanguageProvider + RouterProvider
 │   ├── routes.tsx                 # Todas las rutas con createBrowserRouter
+│   ├── seo.ts                     # Título, descripción y noindex por ruta (pre-render + navegación)
 │   ├── components/
 │   │   ├── Portfolio.tsx          # Página principal (home)
 │   │   ├── NewHero.tsx            # Hero con video + foto + typing animation
@@ -82,6 +86,7 @@ src/
 │   │   └── LanguageContext.tsx    # ES/EN/PT con localStorage persistence
 │   └── utils/
 │       └── analytics.ts           # initGA() con react-ga4
+├── entry-server.tsx               # Entrada SSR para el pre-render del build
 ├── imports/                       # Exports de Figma Make (NO editar manualmente)
 │   ├── *.tsx                      # Componentes generados por Figma
 │   ├── svg-*.ts                   # SVGs como strings inline
@@ -194,10 +199,11 @@ Ver `GOOGLE_ANALYTICS.md` para setup y eventos personalizados.
 
 ## Deploy
 
-- **Plataforma recomendada:** Vercel o Netlify (SPA estática)
-- **Comando de build:** `pnpm build` → genera `dist/`
-- El router usa `createBrowserRouter` → necesita rewrites a `index.html` en producción
-- Vercel lo maneja automáticamente; en Netlify agregar `_redirects`: `/* /index.html 200`
+- **Plataforma:** Vercel, publicando desde la CLI (`vercel deploy --prod --yes`); un push a GitHub no despliega.
+- **Build:** `pnpm build` = `vite build` + build SSR de `src/entry-server.tsx` + `scripts/prerender.mjs`, que escribe un HTML por ruta en `dist/`, `404.html` y `sitemap.xml`.
+- **Toda ruta nueva necesita su entrada en `src/app/seo.ts`**: si falta, el build falla. Sin archivo propio, la ruta respondería 404 en producción.
+- `vercel.json` usa `cleanUrls` y `trailingSlash: false`, sin rewrites: cada URL se sirve desde su HTML y lo desconocido devuelve `404.html` con código 404.
+- Los componentes no pueden usar `window`, `document` ni `localStorage` durante el render (solo dentro de efectos o handlers), porque el pre-render corre en Node.
 
 ---
 
@@ -205,7 +211,8 @@ Ver `GOOGLE_ANALYTICS.md` para setup y eventos personalizados.
 
 ### Alta prioridad
 - [x] **Case study AI App** — Reemplazar `ComingSoonPage` con contenido real del proyecto IA
-- [ ] **SEO meta tags** — Agregar `<title>`, `<meta description>`, Open Graph por ruta (React Helmet o equivalente)
+- [x] **SEO meta tags** — Agregar `<title>`, `<meta description>`, Open Graph por ruta (React Helmet o equivalente)
+  - Hecho con pre-render en el build y `src/app/seo.ts`. Pendiente: rutas `/en` y `/pt` con `hreflang`, imagen para compartir por case study.
 - [ ] **Lazy loading de rutas** — Convertir imports de páginas a `React.lazy()` + `<Suspense>` para reducir bundle inicial
 - [ ] **Optimización de imágenes** — Convertir PNGs en `src/imports/` a WebP/AVIF con `sharp-cli` (ya instalado)
 
