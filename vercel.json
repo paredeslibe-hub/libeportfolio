@@ -2,9 +2,8 @@
   "buildCommand": "pnpm build",
   "outputDirectory": "dist",
   "installCommand": "pnpm install --no-frozen-lockfile",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/(.*)",

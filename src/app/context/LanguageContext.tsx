@@ -14,6 +14,8 @@ const LanguageContext = createContext<LanguageContextType>({
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>(() => {
+    // En el pre-render del build no hay localStorage: el HTML sale en español
+    if (typeof window === 'undefined') return 'es';
     const stored = localStorage.getItem('portfolio-language');
     return (stored as Language) || 'es';
   });
