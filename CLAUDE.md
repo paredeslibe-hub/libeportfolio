@@ -54,8 +54,8 @@ pnpm test
 ```
 src/
 ├── app/
-│   ├── App.tsx                    # Root: ErrorBoundary + LanguageProvider + RouterProvider
-│   ├── routes.tsx                 # Todas las rutas con createBrowserRouter
+│   ├── App.tsx                    # Root: crea el router (createBrowserRouter) + ErrorBoundary + LanguageProvider
+│   ├── routes.tsx                 # Array de rutas (RouteObject[]); el router se crea en App.tsx
 │   ├── seo.ts                     # Título, descripción y noindex por ruta (pre-render + navegación)
 │   ├── components/
 │   │   ├── Portfolio.tsx          # Página principal (home)
