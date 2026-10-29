@@ -10,6 +10,7 @@ import { AiAppPage } from './components/AiAppPage';
 import { DesignSystemPage } from './components/DesignSystemPage';
 import { PortalCreditosPage } from './components/PortalCreditosPage';
 import { PetsAppPage } from './components/PetsAppPage';
+import { NotFoundPage } from './components/NotFoundPage';
 import { useLanguage } from './context/LanguageContext';
 
 function NeobankRoute() {
@@ -42,6 +43,11 @@ function PetsAppRoute() {
   return <PetsAppPage language={language} />;
 }
 
+function NotFoundRoute() {
+  const { language } = useLanguage();
+  return <NotFoundPage language={language} />;
+}
+
 export const router = createBrowserRouter([
   {
     element: <Layout />,
@@ -56,6 +62,7 @@ export const router = createBrowserRouter([
       { path: '/proyectos/portal-creditos', element: <PortalCreditosRoute /> },
       { path: '/proyectos/pets-app', element: <PetsAppRoute /> },
       { path: '/carousel-preview', element: <CarouselPreview /> },
+      { path: '*', element: <NotFoundRoute /> },
     ],
   },
 ]);
